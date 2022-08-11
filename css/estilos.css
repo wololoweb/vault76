@@ -1,0 +1,668 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/************************************** AJUSTES GENERALES **************************************/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+
+body{
+    background-color: rgb(240, 240, 240);
+}
+
+.negro{
+    background-color: rgb(26, 25, 25);
+}
+
+
+.logo {
+    margin-left: 2vw;
+}
+
+.navbar-top {
+    margin-right: 3vw;
+}
+
+.navbar-top a{
+    margin-left: 1.5vw;    
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #27c116 !important;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+}
+
+/*************************************** FOOTER ***************************************/
+
+footer{
+    margin-top: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    background-color: rgb(26, 25, 25);
+    display: flex;
+    
+}
+
+footer h2{
+    color:#27c116;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 3vw;
+}
+
+footer ul{
+    padding-left: 5vw;
+}
+
+footer li{
+    list-style-type: none;
+    
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.8rem;
+    
+}
+
+.redesSociales, footer h2{
+    margin-left: 5vw;
+}
+
+/*************************************** BANNER - EXPANSIONES ***************************************/
+
+
+.banner img{
+    width: 100%;
+}
+
+.descripcion-dlc{
+
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgb(26, 25, 25);
+}
+
+.descripcion-dlc h1{
+    width: 100vw;
+}
+
+
+/* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+
+/* .navbar-top a:hover {
+    color: #27c116 !important;
+    border-bottom: 1px solid white;
+} */
+
+
+/************************************** PASTILLAS **************************************/
+
+.pastillas{
+    display: grid;
+    background-color: rgb(26, 25, 25);
+}
+
+
+
+
+.pastillas div h2{
+    background-color: #27c116;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 1vw;
+    margin: 0;
+}
+
+.pastillas div p{
+    background-color: rgb(37, 36, 36);
+    color: white;
+    margin: 0;
+    padding: 4vw;
+}
+
+
+/************************************** CUERPO **************************************/
+
+.cuerpo {
+
+    display: grid;
+
+}    
+
+/************************************** EXPANSIONES **************************************/
+
+
+    .steel-reign-1,  .steel-reign-2,  .steel-reign-3,
+    .steel-dawn-1,   .steel-dawn-2,   .steel-dawn-3,
+    .wastelanders-1, .wastelanders-2, .wastelanders-3
+    
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(../imagenes/expansiones/steel-reign/banner1.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 40vw;
+        
+    }
+
+    /* STEEL REIGN */
+
+    .steel-reign-2{
+        background-image: url(../imagenes/expansiones/steel-reign/banner2.jpg);
+    }
+
+    .steel-reign-3{
+        background-image: url(../imagenes/expansiones/steel-reign/banner3.jpg);
+    }
+
+    /* STEEL DAWN */
+
+    .steel-dawn-1{
+        background-image: url(../imagenes/expansiones/steel-dawn/banner1.jpg);
+        height: 50vw;
+    }
+    .steel-dawn-2{
+        background-image: url(../imagenes/expansiones/steel-dawn/banner2.jpg);
+        height: 50vw;
+    }
+    .steel-dawn-3{
+        background-image: url(../imagenes/expansiones/steel-dawn/banner3.jpg);
+        height: 50vw;
+    }
+
+
+    /* WASTELANDERS */
+
+    .wastelanders-1{
+        background-image: url(../imagenes/expansiones/wastelanders/banner1.jpg);
+    }
+    .wastelanders-2{
+        background-image: url(../imagenes/expansiones/wastelanders/banner2.jpg);
+    }
+    .wastelanders-3{
+        background-image: url(../imagenes/expansiones/wastelanders/banner3.jpg);
+    }
+
+
+/******************************************************************************************************/
+/********************************** MEDIA QUERIE - CELULAR (<768px) **********************************/
+/******************************************************************************************************/
+
+
+
+@media screen and (max-width: 768px) {
+    
+
+    /************************************** Home **************************************/
+
+    /************* AJUSTES *************/
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .boton-hamburguesa{
+        
+        border-color: #27c116 !important;
+    }
+    
+    .boton-hamburguesa:focus{
+        box-shadow: none;
+        border-color: #27c116;
+    }
+    
+    .icono-hamburguesa {
+        
+        background-image: url(../imagenes/iconos/drawer.svg) !important;
+    }
+
+
+    /************* PASTILLAS *************/
+
+    .pastillas{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-bottom: 5vw;
+        padding-top: 5vw;
+        
+    }
+
+    .pastillas div{
+        margin: 4vw 7vw 4vw 7vw;
+    }
+
+    .pastillas div p{
+        
+        padding: 4vw 7vw;
+        
+        
+    }
+
+    /************* DESCRIPCIÓN *************/
+
+    .descripcion {
+
+        display: flex;
+        flex-direction: column;
+        margin: 5vw 7vw 10vw 7vw;
+    }
+    
+    
+    .descripcion img{
+        width: 100%;
+
+        /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+    }
+
+    .descripcion h1{
+        padding-top: 5vw;
+        margin: 5vw 0;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .descripcion h2{
+        font-size: 1.5rem;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    .descripcion p{
+        padding-top: .5vw;
+        margin: 0;
+    }
+
+    #valoracion{
+        padding-top: .5vw;
+        box-shadow: none;
+        width: 10vw;
+    }    
+
+    .valoracion-txt{
+        margin-left: 1vw;
+        font-size: 1.2rem;
+    }
+
+    /************* DLCS + NOTICIAS *************/
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        
+        
+        margin: 0 5.5vw;
+    }
+
+    .grid div img{
+        width: 100%;
+        margin: 5vw 0;
+        /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+    }
+
+    .grid div h2{
+        
+        font-weight: bold;
+        margin: 5vw 0;
+    }
+
+    
+    .grid div h3{
+        margin: 8vw 0 3vw 0;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    .grid div h3 span{
+        font-weight: normal;
+        margin-left: .4vw;
+    }
+
+    .grid div p{
+        
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+
+    .grid img, .grid p {
+        width: 25.8vw;
+    }
+
+    /************* TITULOS *************/
+
+    .titulo{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid rgb(58, 56, 56);
+        color: rgb(58, 56, 56);
+        margin: 10vw 7vw 10vw 6.5vw;
+        padding-bottom: 1vw;
+        
+    }
+
+
+    /************* EXPANSIONES *************/
+
+    
+   
+    
+    
+    .steel-reign-1 h2,  .steel-reign-2 h2,  .steel-reign-3 h2,
+    .steel-dawn-1 h2,   .steel-dawn-2 h2,   .steel-dawn-3 h2,
+    .wastelanders-1 h2, .wastelanders-2 h2, .wastelanders-3 h2
+    {
+        
+        
+        padding: 3vw 7vw 3vw 6.5vw;
+        margin-bottom: 0;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: none;
+    }
+    .steel-reign-1 p,  .steel-reign-2 p,  .steel-reign-3 p,
+    .steel-dawn-1 p,   .steel-dawn-2 p,   .steel-dawn-3 p,
+    .wastelanders-1 p, .wastelanders-2 p, .wastelanders-3 p
+    
+    {
+        
+        
+        font-weight: bold;
+        padding: 2vw 7vw 5vw 6.5vw;
+        margin-bottom: 0;
+        font-size: .7rem;
+        
+    }
+
+    .steel-reign-1 h2, .steel-reign-1 p, .steel-reign-2 h2, .steel-reign-2 p, .steel-reign-3 h2, .steel-reign-3 p,
+    .steel-dawn-1 h2,  .steel-dawn-1 p,  .steel-dawn-2 h2,  .steel-dawn-2 p,  .steel-dawn-3 h2,  .steel-dawn-3 p,
+    .wastelanders-1 h2,  .wastelanders-1 p,  .wastelanders-2 h2,  .wastelanders-2 p,  .wastelanders-3 h2,  .wastelanders-3 p
+
+    {
+        color: white;
+        
+    }
+
+    
+
+
+    .descripcion-dlc{
+
+        padding: 10vw 7vw 3vw 6.5vw;
+
+    }
+
+    .descripcion-dlc h1{
+        text-align: center;
+        padding-bottom: 5vw;
+        color: #27c116;
+    }   
+    
+    .descripcion-dlc h2{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+
+}
+
+
+
+
+
+
+/******************************************************************************************************/
+/******************************* MEDIA QUERIE - TABLET/DESKTOP (>768px) *******************************/
+/******************************************************************************************************/
+
+
+
+@media screen and (min-width: 769px) { 
+
+    /************* AJUSTES *************/
+
+    .logo {
+        margin-left: 2vw;
+    }
+
+    .boton-hamburguesa{
+        
+        border-color: #27c116 !important;
+    }
+    
+    .boton-hamburguesa:focus{
+        box-shadow: none;
+        border-color: #27c116;
+    }
+    
+    .icono-hamburguesa {
+        
+        background-image: url(../imagenes/iconos/drawer.svg) !important;
+    }
+
+
+     /************* PASTILLAS *************/
+
+     .pastillas{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 0 5vw;
+    }
+
+    /************* PASTILLAS *************/
+    .pastillas div{
+        margin: 4vw 2vw 4vw 1.5vw;
+        /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+    }
+
+    .pastillas div p{
+        
+        padding: 2vw;
+    }
+
+    /************* MAIN *************/
+
+    .descripcion {
+
+        display: flex;
+        margin: 5vw 7vw 7vw 6.5vw;
+        
+    }
+    
+    
+    .descripcion img{
+        width: 25.8vw;
+        /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+    }
+
+    .descripcion h1, .descripcion h2{
+        padding-left: 5.3vw;
+    }
+
+    .descripcion h2{
+        font-size: 1.5rem;
+        margin-top: 3vw;
+        margin-bottom: 1vw;
+    }
+
+    .descripcion p{
+        padding-top: .5vw;
+        padding-left: 5.5vw;
+        
+    }
+
+    #valoracion{
+        box-shadow: none;
+        width: 5vw;
+        margin-left: 5vw;
+        
+        
+    }  
+
+    
+    .valoracion-txt{
+        margin-left: 1vw;
+        font-size: 1.2rem;
+    }
+
+    /************* DLCS + NOTICIAS *************/
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        padding: 0 5vw;
+        margin-top: 5vw;
+        
+    }
+
+    .grid div{
+        margin: 0 2vw 0 1.5vw;
+    }
+    
+
+    .grid div img{
+        /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+        
+    }
+
+    .grid div h2{
+        margin-top: 2vw;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding-right: 3.1vw;
+    }
+
+    .grid div h3{
+        margin-top: 1vw ;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    .grid div h3 span{
+        font-weight: normal;
+        margin-left: .4vw;
+    }
+
+    .grid p{
+        padding: 1vw 0;
+    }
+
+    .grid img, .grid p{
+        width: 25.8vw;
+    }
+
+     /************* DLCS + NOTICIAS *************/
+
+    .mapaDelSitio{
+        margin-left: 1.5vw;
+    }
+
+    .titulo{
+        display: flex;
+        border-bottom: 2px solid rgb(58, 56, 56);
+        color: rgb(58, 56, 56);
+        margin: 5vw 7vw 0 6.5vw;
+        padding-bottom: 1vw;
+        
+    }
+
+    /********************* EXPANSIONES *******************/
+
+    .menu-desplegable{
+        margin-left: 1.5vw;
+        padding-right: 3vw;
+        
+    }
+
+    
+
+    .steel-reign-1 h2,  .steel-reign-2 h2,  .steel-reign-3 h2,
+    .steel-dawn-1 h2,   .steel-dawn-2 h2,   .steel-dawn-3 h2,
+    .wastelanders-1 h2, .wastelanders-2 h2, .wastelanders-3 h2
+    {
+        background-color: #27c116;
+        padding: 1vw 2vw;
+        margin: 0;
+        font-size: 1.5rem;
+        /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+    }
+    .steel-reign-1 p,  .steel-reign-2 p,  .steel-reign-3 p,
+    .steel-dawn-1 p,   .steel-dawn-2 p,   .steel-dawn-3 p,
+    .wastelanders-1 p, .wastelanders-2 p, .wastelanders-3 p
+    
+    {        
+        
+        padding: 2vw;
+        background-color: rgb(37, 36, 36);
+        /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
+        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+    }
+
+    .steel-reign-1 h2, .steel-reign-1 p, .steel-reign-2 h2, .steel-reign-2 p, .steel-reign-3 h2, .steel-reign-3 p,
+    .steel-dawn-1 h2,  .steel-dawn-1 p,  .steel-dawn-2 h2,  .steel-dawn-2 p,  .steel-dawn-3 h2,  .steel-dawn-3 p,
+    .wastelanders-1 h2,  .wastelanders-1 p,  .wastelanders-2 h2,  .wastelanders-2 p,  .wastelanders-3 h2,  .wastelanders-3 p
+
+    {
+        width: 35vw;
+        color: white;
+        align-self: flex-end;
+        margin-right: 7vw;
+        
+    }
+
+    .steel-reign-2 h2, .steel-reign-2 p,
+    .steel-dawn-2 h2,  .steel-dawn-2 p,
+    .wastelanders-2 h2,  .wastelanders-2 p
+    
+    {
+
+        align-self: flex-start;
+        margin-left: 7vw;
+    }
+
+    
+
+    
+
+    .descripcion-dlc{
+
+        padding: 3vw 7vw 3vw 6.5vw;
+
+    }
+
+    .descripcion-dlc h1{
+        text-align: center;
+        padding-bottom: 3vw;
+        color: #27c116;
+    }   
+    
+    .descripcion-dlc h2{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+}
