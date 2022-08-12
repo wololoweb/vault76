@@ -101,13 +101,31 @@ footer a{
     width: 100vw;
 }
 
+.navbar-desplegable{
+    background-color: rgb(26, 25, 25);
+    border: none;
+}
+
+.navbar-desplegable a{
+    color: white;
+}
+
 
 /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
 
-/* .navbar-top a:hover {
+.navbar-top a:hover {
     color: #27c116 !important;
     border-bottom: 1px solid white;
-} */
+    
+}
+
+
+
+
+.navbar-desplegable a:hover{
+    background-color: rgb(26, 25, 25);
+    
+}
 
 
 /************************************** PASTILLAS **************************************/
@@ -270,7 +288,7 @@ footer a{
         width: 100%;
 
         /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
-        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
     }
 
     .descripcion h1{
@@ -317,7 +335,7 @@ footer a{
         width: 100%;
         margin: 5vw 0;
         /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
-        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
     }
 
     .grid div h2{
@@ -468,11 +486,11 @@ footer a{
         padding: 0 5vw;
     }
 
-    /************* PASTILLAS *************/
+    
     .pastillas div{
         margin: 4vw 2vw 4vw 1.5vw;
         /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
-        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
     }
 
     .pastillas div p{
@@ -493,7 +511,7 @@ footer a{
     .descripcion img{
         width: 25.8vw;
         /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
-        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
     }
 
     .descripcion h1, .descripcion h2{
@@ -544,9 +562,15 @@ footer a{
 
     .grid div img{
         /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
-        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
-        
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+        transition: all 1s;
     }
+
+    .grid div img:hover{
+        
+        transform: scale(1.1,1.1);
+    }
+    
 
     .grid div h2{
         margin-top: 2vw;
@@ -608,7 +632,7 @@ footer a{
         margin: 0;
         font-size: 1.5rem;
         /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
-        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
     }
     .steel-reign-1 p,  .steel-reign-2 p,  .steel-reign-3 p,
     .steel-dawn-1 p,   .steel-dawn-2 p,   .steel-dawn-3 p,
@@ -619,7 +643,7 @@ footer a{
         padding: 2vw;
         background-color: rgb(37, 36, 36);
         /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */ 
-        /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4); */
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
     }
 
     .steel-reign-1 h2, .steel-reign-1 p, .steel-reign-2 h2, .steel-reign-2 p, .steel-reign-3 h2, .steel-reign-3 p,
