@@ -1,14 +1,10 @@
-@charset "UTF-8";
+/****************************************** VARIABLES ******************************************/ /**************************************** TIPOGRAFIA ****************************************/
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap");
-/************************************** AJUSTES GENERALES **************************************/
+/**************************************** AJUSTES GENERALES ****************************************/
 * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-}
-
-.banner img {
-  margin-top: 6vw;
 }
 
 body {
@@ -19,114 +15,138 @@ body {
   background-color: rgb(26, 25, 25);
 }
 
-.logo {
-  margin-left: 2vw;
+/********************************************* NAV BAR *********************************************/
+.navbar {
+  height: 100px;
+}
+
+header {
+  margin-top: 100px;
 }
 
 .navbar-top {
   margin-right: 3vw;
 }
-
 .navbar-top a {
   margin-left: 1.5vw;
   font-weight: bold;
 }
-
-.logo {
-  font-size: 3rem;
+.navbar-top a:hover {
   color: #27c116 !important;
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: bold;
-}
-
-/*************************************** FOOTER ***************************************/
-footer {
-  margin-top: 5vw;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  background-color: rgb(26, 25, 25);
-  display: flex;
-}
-
-footer h2 {
-  color: #27c116;
-  font-size: 1rem;
-  font-weight: bold;
-  padding-top: 3vw;
-}
-
-footer ul {
-  padding-left: 5vw;
-}
-
-footer li {
-  list-style-type: none;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 0.8rem;
-}
-
-footer a:hover {
-  color: #27c116;
-}
-
-.redesSociales,
-footer h2 {
-  margin-left: 5vw;
-}
-
-.redesSociales h2 {
-  margin-left: 0;
-}
-.redesSociales ul {
-  padding-left: 0;
-}
-
-/*************************************** BANNER - EXPANSIONES ***************************************/
-.banner img {
-  width: 100%;
-}
-
-.descripcion-dlc {
-  display: flex;
-  flex-wrap: wrap;
-  color: white;
-  background-color: rgb(26, 25, 25);
-}
-
-.descripcion-dlc h1 {
-  width: 100vw;
+  border-bottom: 1px solid white;
 }
 
 .navbar-desplegable {
   background-color: rgb(26, 25, 25);
   border: none;
 }
-
+@media (min-width: 769px) {
+  .navbar-desplegable {
+    margin-left: 1.5vw;
+    padding-right: 3vw;
+  }
+}
 .navbar-desplegable a {
   color: white;
 }
-
-/* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-.navbar-top a:hover {
-  color: #27c116 !important;
-  border-bottom: 1px solid white;
-}
-
 .navbar-desplegable a:hover {
   background-color: rgb(26, 25, 25);
 }
 
-/************************************** PASTILLAS **************************************/
+/********************************************** LOGO **********************************************/
+.logo {
+  font-size: 3rem;
+  color: #27c116 !important;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 0;
+  }
+}
+@media (min-width: 769px) {
+  .logo {
+    margin-left: 2vw;
+  }
+}
+
+/**************************************** MENU HAMBURGUESA ****************************************/
+.boton-hamburguesa {
+  border-color: #27c116 !important;
+}
+.boton-hamburguesa:focus {
+  box-shadow: none;
+  border-color: #27c116;
+}
+
+.icono-hamburguesa {
+  background-image: url(../imagenes/iconos/drawer.svg) !important;
+}
+
+/********************************************* BANNER *********************************************/
+.banner img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .banner img {
+    height: 100%;
+  }
+}
+
+/******************************************* ENCABEZADOS *******************************************/
+.titulo {
+  display: flex;
+  color: rgb(58, 56, 56);
+  padding-top: 5vh;
+  padding-bottom: 1vw;
+}
+@media (max-width: 768px) {
+  .titulo {
+    justify-content: center;
+    border-bottom: 1px solid rgb(58, 56, 56);
+    margin: 10vw 7vw 5vw 6.5vw;
+  }
+}
+@media (min-width: 769px) {
+  .titulo {
+    border-bottom: 2px solid rgb(58, 56, 56);
+    margin: 5vw 7vw 0 6.5vw;
+  }
+}
+
+/****************************************** PASTILLAS ******************************************/
 .pastillas {
   display: grid;
   background-color: rgb(26, 25, 25);
 }
-
+@media (max-width: 768px) {
+  .pastillas {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 5vw;
+    padding-top: 5vw;
+  }
+}
+@media (min-width: 769px) {
+  .pastillas {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0 5vw;
+  }
+}
+@media (max-width: 768px) {
+  .pastillas div {
+    margin: 4vw 7vw 4vw 7vw;
+  }
+}
+@media (min-width: 769px) {
+  .pastillas div {
+    margin: 4vw 2vw 4vw 1.5vw;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+  }
+}
 .pastillas div h2 {
   background-color: #27c116;
   width: 100%;
@@ -135,39 +155,246 @@ footer h2 {
   padding: 1vw;
   margin: 0;
 }
-
 .pastillas div p {
   background-color: rgb(37, 36, 36);
   color: white;
   margin: 0;
-  padding: 4vw;
+}
+@media (max-width: 768px) {
+  .pastillas div p {
+    padding: 4vw 7vw;
+  }
+}
+@media (min-width: 769px) {
+  .pastillas div p {
+    padding: 2vw;
+  }
 }
 
-/************************************** CUERPO **************************************/
-.cuerpo {
+/******************************************* DESCRIPCION *******************************************/
+.descripcion {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .descripcion {
+    flex-direction: column;
+    margin: 5vw 7vw 10vw 7vw;
+  }
+  .descripcion img {
+    width: 100%;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+  }
+  .descripcion p {
+    padding-top: 0.5vw;
+    margin: 0;
+  }
+  .descripcion h1 {
+    padding-top: 5vw;
+    margin: 5vw 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .descripcion h2 {
+    font-size: 1.5rem;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+}
+@media (min-width: 769px) {
+  .descripcion {
+    flex-direction: row;
+    margin: 5vw 7vw 7vw 6.5vw;
+  }
+  .descripcion img {
+    width: 25.8vw;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+  }
+  .descripcion p {
+    padding-top: 0.5vw;
+    padding-left: 5.5vw;
+  }
+  .descripcion h1 {
+    padding-left: 5.3vw;
+  }
+  .descripcion h2 {
+    padding-left: 5.3vw;
+    font-size: 1.5rem;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+  }
+}
+
+/******************************************* VALORACIONES *******************************************/
+#valoracion {
+  box-shadow: none;
+}
+@media (max-width: 768px) {
+  #valoracion {
+    padding-top: 0.5vw;
+    width: 10vw;
+  }
+}
+@media (min-width: 769px) {
+  #valoracion {
+    width: 5vw;
+    margin-left: 5vw;
+  }
+}
+
+.valoracion-txt {
+  margin-left: 1vw;
+  font-size: 1.2rem;
+}
+
+/****************************************** GRILLAS ******************************************/
+.grid {
   display: grid;
+  grid-auto-rows: auto;
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin: 0 5.5vw;
+  }
+  .grid img {
+    width: 25.8vw;
+  }
+  .grid p {
+    width: 25.8vw;
+  }
+  .grid div img {
+    width: 100%;
+    margin: 5vw 0;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+  }
+  .grid div h2 {
+    font-weight: bold;
+    margin: 5vw 0;
+  }
+  .grid div h3 {
+    margin: 8vw 0 3vw 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .grid div h3 span {
+    font-weight: normal;
+    margin-left: 0.4vw;
+  }
+  .grid div p {
+    width: 100%;
+    margin-bottom: 5vw;
+  }
+}
+@media (min-width: 769px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 5vw;
+    margin-top: 5vw;
+  }
+  .grid div {
+    margin: 0 2vw 0 1.5vw;
+  }
+  .grid div img {
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+    transition: all 1s;
+    width: 25.8vw;
+  }
+  .grid div img:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .grid div h2 {
+    margin-top: 2vw;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-right: 3.1vw;
+  }
+  .grid div h3 {
+    margin-top: 1vw;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .grid div h3 span {
+    font-weight: normal;
+    margin-left: 0.4vw;
+  }
+  .grid div p {
+    padding: 1vw 0;
+    width: 25.8vw;
+  }
 }
 
-/************************************** EXPANSIONES **************************************/
-.steel-reign-1,
-.steel-reign-2,
-.steel-reign-3,
-.steel-dawn-1,
-.steel-dawn-2,
-.steel-dawn-3,
-.wastelanders-1,
-.wastelanders-2,
-.wastelanders-3 {
+/**************************************** SECCION - EXPANSIONES ****************************************/
+.steel-reign-1, .steel-reign-2, .steel-reign-3,
+.steel-dawn-1, .steel-dawn-2, .steel-dawn-3,
+.wastelanders-1, .wastelanders-2, .wastelanders-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(../imagenes/expansiones/steel-reign/banner1.jpg);
   background-size: cover;
   width: 100%;
   height: 40vw;
 }
+@media (max-width: 768px) {
+  .steel-reign-1 h2, .steel-reign-2 h2, .steel-reign-3 h2,
+.steel-dawn-1 h2, .steel-dawn-2 h2, .steel-dawn-3 h2,
+.wastelanders-1 h2, .wastelanders-2 h2, .wastelanders-3 h2 {
+    padding: 3vw 7vw 3vw 6.5vw;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: none;
+    color: white;
+  }
+  .steel-reign-1 p, .steel-reign-2 p, .steel-reign-3 p,
+.steel-dawn-1 p, .steel-dawn-2 p, .steel-dawn-3 p,
+.wastelanders-1 p, .wastelanders-2 p, .wastelanders-3 p {
+    font-weight: bold;
+    padding: 2vw 7vw 5vw 6.5vw;
+    margin-bottom: 0;
+    font-size: 0.7rem;
+    color: white;
+  }
+}
+@media (min-width: 769px) {
+  .steel-reign-1 h2, .steel-reign-2 h2, .steel-reign-3 h2,
+.steel-dawn-1 h2, .steel-dawn-2 h2, .steel-dawn-3 h2,
+.wastelanders-1 h2, .wastelanders-2 h2, .wastelanders-3 h2 {
+    background-color: #27c116;
+    padding: 1vw 2vw;
+    margin: 0;
+    font-size: 1.5rem;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+    width: 35vw;
+    color: white;
+    align-self: flex-end;
+    margin-right: 7vw;
+  }
+  .steel-reign-1 p, .steel-reign-2 p, .steel-reign-3 p,
+.steel-dawn-1 p, .steel-dawn-2 p, .steel-dawn-3 p,
+.wastelanders-1 p, .wastelanders-2 p, .wastelanders-3 p {
+    padding: 2vw;
+    background-color: rgb(37, 36, 36);
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+    width: 35vw;
+    color: white;
+    align-self: flex-end;
+    margin-right: 7vw;
+  }
+}
 
+@media (min-width: 769px) {
+  .steel-reign-2 h2, .steel-reign-2 p, .steel-dawn-2 h2, .steel-dawn-2 p, .wastelanders-2 h2, .wastelanders-2 p {
+    align-self: flex-start;
+    margin-left: 7vw;
+  }
+}
+
+/**************************************** IMAGENES ****************************************/
 /* STEEL REIGN */
+.steel-reign-1 {
+  background-image: url(../imagenes/expansiones/steel-reign/banner1.jpg);
+}
+
 .steel-reign-2 {
   background-image: url(../imagenes/expansiones/steel-reign/banner2.jpg);
 }
@@ -205,437 +432,149 @@ footer h2 {
   background-image: url(../imagenes/expansiones/wastelanders/banner3.jpg);
 }
 
-/************************************** CONTACTO **************************************/
+/************************************** DESCRIPCION - DLC **************************************/
+.descripcion-dlc {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  background-color: rgb(26, 25, 25);
+}
+@media (max-width: 768px) {
+  .descripcion-dlc {
+    padding: 10vw 7vw 3vw 6.5vw;
+  }
+}
+@media (min-width: 769px) {
+  .descripcion-dlc {
+    padding: 3vw 7vw 3vw 6.5vw;
+  }
+}
+.descripcion-dlc h1 {
+  width: 100vw;
+  text-align: center;
+  color: #27c116;
+}
+@media (max-width: 768px) {
+  .descripcion-dlc h1 {
+    padding-bottom: 5vw;
+  }
+}
+@media (min-width: 769px) {
+  .descripcion-dlc h1 {
+    padding-bottom: 3vw;
+  }
+}
+.descripcion-dlc h2 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/**************************************** SECCION CONTACTO ****************************************/
 .contacto {
   display: flex;
-  flex-direction: row;
-  margin: 0 7vw 0 6.5vw;
+}
+@media (max-width: 768px) {
+  .contacto {
+    flex-direction: column;
+    margin: 0 5.5vw;
+  }
+}
+@media (min-width: 769px) {
+  .contacto {
+    flex-direction: row;
+    margin: 0 7vw 0 6.5vw;
+  }
 }
 
 .mapa {
   margin-top: 3vw;
 }
-.mapa iframe {
-  width: 40vw;
-  height: 40vw;
-  margin-left: 5vw;
+@media (max-width: 768px) {
+  .mapa iframe {
+    width: 100%;
+    height: 100vw;
+    margin: 3vw 0;
+  }
+}
+@media (min-width: 769px) {
+  .mapa iframe {
+    width: 40vw;
+    height: 40vw;
+    margin-left: 5vw;
+  }
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
 }
-.formulario label {
-  margin-top: 3vw;
-  font-weight: bold;
-}
-
-/******************************************************************************************************/
-/********************************** MEDIA QUERIE - CELULAR (<768px) **********************************/
-/******************************************************************************************************/
-@media screen and (max-width: 768px) {
-  /************************************** Home **************************************/
-  /************* AJUSTES *************/
-  .fixed-top {
-    position: relative;
-  }
-  .banner img {
-    width: 100%;
-    margin-top: 0;
-    height: 100%;
-  }
-  .carousel {
-    margin-top: 0;
-  }
-  .logo {
-    margin-left: 0;
-  }
-  .boton-hamburguesa {
-    border-color: #27c116 !important;
-  }
-  .boton-hamburguesa:focus {
-    box-shadow: none;
-    border-color: #27c116;
-  }
-  .icono-hamburguesa {
-    background-image: url(../imagenes/iconos/drawer.svg) !important;
-  }
-  /************* PASTILLAS *************/
-  .pastillas {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    padding-bottom: 5vw;
-    padding-top: 5vw;
-  }
-  .pastillas div {
-    margin: 4vw 7vw 4vw 7vw;
-  }
-  .pastillas div p {
-    padding: 4vw 7vw;
-  }
-  /************* DESCRIPCIÓN *************/
-  .descripcion {
-    display: flex;
-    flex-direction: column;
-    margin: 5vw 7vw 10vw 7vw;
-  }
-  .descripcion img {
-    width: 100%;
-    /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
-  }
-  .descripcion h1 {
-    padding-top: 5vw;
-    margin: 5vw 0;
-    text-align: center;
-    font-weight: bold;
-  }
-  .descripcion h2 {
-    font-size: 1.5rem;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-  }
-  .descripcion p {
-    padding-top: 0.5vw;
-    margin: 0;
-  }
-  #valoracion {
-    padding-top: 0.5vw;
-    box-shadow: none;
-    width: 10vw;
-  }
-  .valoracion-txt {
-    margin-left: 1vw;
-    font-size: 1.2rem;
-  }
-  /************* DLCS + NOTICIAS *************/
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    margin: 0 5.5vw;
-  }
-  .grid div img {
-    width: 100%;
-    margin: 5vw 0;
-    /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
-  }
-  .grid div h2 {
-    font-weight: bold;
-    margin: 5vw 0;
-  }
-  .grid div h3 {
-    margin: 8vw 0 3vw 0;
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
-  .grid div h3 span {
-    font-weight: normal;
-    margin-left: 0.4vw;
-  }
-  .grid div p {
-    width: 100%;
-    margin-bottom: 5vw;
-  }
-  .grid img,
-.grid p {
-    width: 25.8vw;
-  }
-  /************* TITULOS *************/
-  .titulo {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid rgb(58, 56, 56);
-    color: rgb(58, 56, 56);
-    margin: 10vw 7vw 10vw 6.5vw;
-    padding-bottom: 1vw;
-  }
-  /************* EXPANSIONES *************/
-  .steel-reign-1 h2,
-.steel-reign-2 h2,
-.steel-reign-3 h2,
-.steel-dawn-1 h2,
-.steel-dawn-2 h2,
-.steel-dawn-3 h2,
-.wastelanders-1 h2,
-.wastelanders-2 h2,
-.wastelanders-3 h2 {
-    padding: 3vw 7vw 3vw 6.5vw;
-    margin-bottom: 0;
-    font-size: 1rem;
-    font-weight: bold;
-    box-shadow: none;
-  }
-  .steel-reign-1 p,
-.steel-reign-2 p,
-.steel-reign-3 p,
-.steel-dawn-1 p,
-.steel-dawn-2 p,
-.steel-dawn-3 p,
-.wastelanders-1 p,
-.wastelanders-2 p,
-.wastelanders-3 p {
-    font-weight: bold;
-    padding: 2vw 7vw 5vw 6.5vw;
-    margin-bottom: 0;
-    font-size: 0.7rem;
-  }
-  .steel-reign-1 h2,
-.steel-reign-1 p,
-.steel-reign-2 h2,
-.steel-reign-2 p,
-.steel-reign-3 h2,
-.steel-reign-3 p,
-.steel-dawn-1 h2,
-.steel-dawn-1 p,
-.steel-dawn-2 h2,
-.steel-dawn-2 p,
-.steel-dawn-3 h2,
-.steel-dawn-3 p,
-.wastelanders-1 h2,
-.wastelanders-1 p,
-.wastelanders-2 h2,
-.wastelanders-2 p,
-.wastelanders-3 h2,
-.wastelanders-3 p {
-    color: white;
-  }
-  .descripcion-dlc {
-    padding: 10vw 7vw 3vw 6.5vw;
-  }
-  .descripcion-dlc h1 {
-    text-align: center;
-    padding-bottom: 5vw;
-    color: #27c116;
-  }
-  .descripcion-dlc h2 {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  /************* FOOTER *************/
-  footer {
-    flex-direction: column;
-  }
-  /************************************** Contacto **************************************/
-  .contacto {
-    display: flex;
-    flex-direction: column;
-    margin: 0 5.5vw;
-  }
-  .mapa {
-    margin-top: 3vw;
-  }
-  .mapa iframe {
-    width: 100%;
-    height: 100vw;
-    margin-left: 0;
-    margin: 3vw 0;
-  }
-}
-/******************************************************************************************************/
-/******************************* MEDIA QUERIE - TABLET/DESKTOP (>768px) *******************************/
-/******************************************************************************************************/
-@media screen and (min-width: 769px) {
-  /************* AJUSTES *************/
-  .carousel {
-    margin-top: 7vh;
-  }
-  .logo {
-    margin-left: 2vw;
-  }
-  .boton-hamburguesa {
-    border-color: #27c116 !important;
-  }
-  .boton-hamburguesa:focus {
-    box-shadow: none;
-    border-color: #27c116;
-  }
-  .icono-hamburguesa {
-    background-image: url(../imagenes/iconos/drawer.svg) !important;
-  }
-  /************* PASTILLAS *************/
-  .pastillas {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 0 5vw;
-  }
-  .pastillas div {
-    margin: 4vw 2vw 4vw 1.5vw;
-    /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
-  }
-  .pastillas div p {
-    padding: 2vw;
-  }
-  /************* MAIN *************/
-  .descripcion {
-    display: flex;
-    margin: 5vw 7vw 7vw 6.5vw;
-  }
-  .descripcion img {
-    width: 25.8vw;
-    /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
-  }
-  .descripcion h1,
-.descripcion h2 {
-    padding-left: 5.3vw;
-  }
-  .descripcion h2 {
-    font-size: 1.5rem;
-    margin-top: 3vw;
-    margin-bottom: 1vw;
-  }
-  .descripcion p {
-    padding-top: 0.5vw;
-    padding-left: 5.5vw;
-  }
-  #valoracion {
-    box-shadow: none;
-    width: 5vw;
-    margin-left: 5vw;
-  }
-  .valoracion-txt {
-    margin-left: 1vw;
-    font-size: 1.2rem;
-  }
-  /************* DLCS + NOTICIAS *************/
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: auto;
-    padding: 0 5vw;
-    margin-top: 5vw;
-  }
-  .grid div {
-    margin: 0 2vw 0 1.5vw;
-  }
-  .grid div img {
-    /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
-    transition: all 1s;
-  }
-  .grid div img:hover {
-    transform: scale(1.1, 1.1);
-  }
-  .grid div h2 {
-    margin-top: 2vw;
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding-right: 3.1vw;
-  }
-  .grid div h3 {
-    margin-top: 1vw;
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
-  .grid div h3 span {
-    font-weight: normal;
-    margin-left: 0.4vw;
-  }
-  .grid p {
-    padding: 1vw 0;
-  }
-  .grid img,
-.grid p {
-    width: 25.8vw;
-  }
-  /************* DLCS + NOTICIAS *************/
-  .mapaDelSitio {
-    margin-left: 1.5vw;
-  }
-  .titulo {
-    display: flex;
-    border-bottom: 2px solid rgb(58, 56, 56);
-    color: rgb(58, 56, 56);
-    margin: 5vw 7vw 0 6.5vw;
-    padding-bottom: 1vw;
-  }
-  /********************* EXPANSIONES *******************/
-  .menu-desplegable {
-    margin-left: 1.5vw;
-    padding-right: 3vw;
-  }
-  .steel-reign-1 h2,
-.steel-reign-2 h2,
-.steel-reign-3 h2,
-.steel-dawn-1 h2,
-.steel-dawn-2 h2,
-.steel-dawn-3 h2,
-.wastelanders-1 h2,
-.wastelanders-2 h2,
-.wastelanders-3 h2 {
-    background-color: #27c116;
-    padding: 1vw 2vw;
-    margin: 0;
-    font-size: 1.5rem;
-    /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
-  }
-  .steel-reign-1 p,
-.steel-reign-2 p,
-.steel-reign-3 p,
-.steel-dawn-1 p,
-.steel-dawn-2 p,
-.steel-dawn-3 p,
-.wastelanders-1 p,
-.wastelanders-2 p,
-.wastelanders-3 p {
-    padding: 2vw;
-    background-color: rgb(37, 36, 36);
-    /* ANIMACIONES-TRANSFORMACIONES-TRANSICIONES */
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
-  }
-  .steel-reign-1 h2,
-.steel-reign-1 p,
-.steel-reign-2 h2,
-.steel-reign-2 p,
-.steel-reign-3 h2,
-.steel-reign-3 p,
-.steel-dawn-1 h2,
-.steel-dawn-1 p,
-.steel-dawn-2 h2,
-.steel-dawn-2 p,
-.steel-dawn-3 h2,
-.steel-dawn-3 p,
-.wastelanders-1 h2,
-.wastelanders-1 p,
-.wastelanders-2 h2,
-.wastelanders-2 p,
-.wastelanders-3 h2,
-.wastelanders-3 p {
-    width: 35vw;
-    color: white;
-    align-self: flex-end;
-    margin-right: 7vw;
-  }
-  .steel-reign-2 h2,
-.steel-reign-2 p,
-.steel-dawn-2 h2,
-.steel-dawn-2 p,
-.wastelanders-2 h2,
-.wastelanders-2 p {
-    align-self: flex-start;
-    margin-left: 7vw;
-  }
-  .descripcion-dlc {
-    padding: 3vw 7vw 3vw 6.5vw;
-  }
-  .descripcion-dlc h1 {
-    text-align: center;
-    padding-bottom: 3vw;
-    color: #27c116;
-  }
-  .descripcion-dlc h2 {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  /************************************** Contacto **************************************/
+@media (min-width: 769px) {
   .formulario h1 {
     margin-bottom: 2vw;
   }
   .formulario div {
     width: 40vw;
+  }
+}
+.formulario label {
+  margin-top: 3vw;
+  font-weight: bold;
+}
+
+/******************************************* FOOTER *******************************************/
+footer {
+  margin-top: 5vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  background-color: rgb(26, 25, 25);
+  display: flex;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
+@media (min-width: 769px) {
+  footer {
+    flex-direction: row;
+  }
+}
+footer h2 {
+  color: #27c116;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 3vw;
+  margin-left: 5vw;
+}
+footer ul {
+  padding-left: 5vw;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+footer a:hover {
+  color: #27c116;
+}
+
+/**************************************** REDES SOCIALES ****************************************/
+.redesSociales {
+  margin-left: 5vw;
+}
+.redesSociales h2 {
+  margin-left: 0;
+}
+.redesSociales ul {
+  padding-left: 0;
+}
+
+@media (min-width: 769px) {
+  .mapaDelSitio {
+    margin-left: 1.5vw;
   }
 }/*# sourceMappingURL=styles.css.map */

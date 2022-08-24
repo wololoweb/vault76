@@ -1,0 +1,177 @@
+/**************************************** SECCION - EXPANSIONES ****************************************/
+
+.steel-reign-1   ,  .steel-reign-2   ,  .steel-reign-3  ,
+.steel-dawn-1    ,  .steel-dawn-2    ,  .steel-dawn-3   ,
+.wastelanders-1  ,  .wastelanders-2  ,  .wastelanders-3 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    width: 100%;
+    height: 40vw;
+
+    @media (max-width:768px){
+
+        h2{
+            padding: 3vw 7vw 3vw 6.5vw;
+            margin-bottom: 0;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: none;
+            color: white;
+        }
+
+        p{
+            font-weight: bold;
+            padding: 2vw 7vw 5vw 6.5vw;
+            margin-bottom: 0;
+            font-size: .7rem;
+            color: white;
+        }
+
+    }
+
+    @media (min-width:769px){
+
+        h2{
+            background-color: $verde;
+            padding: 1vw 2vw;
+            margin: 0;
+            font-size: 1.5rem;
+            box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+            width: 35vw;
+            color: white;
+            align-self: flex-end;
+            margin-right: 7vw;
+        }
+
+        p{
+            padding: 2vw;
+            background-color: rgb(37, 36, 36);
+            box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+            width: 35vw;
+            color: white;
+            align-self: flex-end;
+            margin-right: 7vw;
+        }
+
+    }
+
+
+}
+
+
+.steel-reign-2  ,  .steel-dawn-2  , .wastelanders-2
+{
+    @media (min-width:769px){
+
+        h2,p{
+            align-self: flex-start;
+            margin-left: 7vw;
+        }
+
+    }
+        
+}
+
+
+/**************************************** IMAGENES ****************************************/
+
+
+
+/* STEEL REIGN */
+
+.steel-reign-1 {
+    background-image: url(../imagenes/expansiones/steel-reign/banner1.jpg);
+}
+
+.steel-reign-2 {
+    background-image: url(../imagenes/expansiones/steel-reign/banner2.jpg);
+}
+
+.steel-reign-3 {
+    background-image: url(../imagenes/expansiones/steel-reign/banner3.jpg);
+}
+
+/* STEEL DAWN */
+
+.steel-dawn-1 {
+    background-image: url(../imagenes/expansiones/steel-dawn/banner1.jpg);
+    height: 50vw;
+}
+
+.steel-dawn-2 {
+    background-image: url(../imagenes/expansiones/steel-dawn/banner2.jpg);
+    height: 50vw;
+}
+
+.steel-dawn-3 {
+    background-image: url(../imagenes/expansiones/steel-dawn/banner3.jpg);
+    height: 50vw;
+}
+
+
+/* WASTELANDERS */
+
+.wastelanders-1 {
+    background-image: url(../imagenes/expansiones/wastelanders/banner1.jpg);
+}
+
+.wastelanders-2 {
+    background-image: url(../imagenes/expansiones/wastelanders/banner2.jpg);
+}
+
+.wastelanders-3 {
+    background-image: url(../imagenes/expansiones/wastelanders/banner3.jpg);
+}
+
+
+/************************************** DESCRIPCION - DLC **************************************/
+
+
+.descripcion-dlc {
+
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgb(26, 25, 25);
+
+    @media (max-width:768px){
+
+        padding: 10vw 7vw 3vw 6.5vw;
+
+    }
+
+    @media (min-width:769px){
+
+        padding: 3vw 7vw 3vw 6.5vw;
+
+    }
+
+    h1 {
+        width: 100vw;
+        text-align: center;
+        color: $verde;
+        
+        @media (max-width:768px){
+
+            padding-bottom: 5vw;
+
+        }
+
+        @media (min-width:769px){
+            padding-bottom: 3vw;
+        }
+
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+}
+
+
+

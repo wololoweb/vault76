@@ -1,0 +1,19 @@
+/******************************************* ENCABEZADOS *******************************************/
+
+.titulo{
+    display: flex;
+    color: rgb(58, 56, 56);
+    padding-top: 5vh;
+    padding-bottom: 1vw;
+
+    @media (max-width:768px){
+        justify-content: center;
+        border-bottom: 1px solid rgb(58, 56, 56);
+        margin: 10vw 7vw 5vw 6.5vw;
+    }
+
+    @media (min-width:769px){
+        border-bottom: 2px solid rgb(58, 56, 56);
+        margin: 5vw 7vw 0 6.5vw;
+    }
+}   

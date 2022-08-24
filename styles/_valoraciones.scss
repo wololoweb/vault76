@@ -1,0 +1,23 @@
+/******************************************* VALORACIONES *******************************************/
+
+#valoracion{
+    box-shadow: none;
+
+    @media (max-width:768px){
+        padding-top: .5vw;
+        width: 10vw;
+    }
+
+    @media (min-width:769px){
+        width: 5vw;
+        margin-left: 5vw;
+    }
+
+}
+
+.valoracion-txt{
+    margin-left: 1vw;
+    font-size: 1.2rem;
+}
+
+

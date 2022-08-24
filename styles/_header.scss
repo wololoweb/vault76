@@ -1,0 +1,98 @@
+/********************************************* NAV BAR *********************************************/
+
+.navbar{
+    height: 100px;
+}
+
+header{
+    margin-top: 100px;
+}
+
+.navbar-top {
+    margin-right: 3vw;
+
+    a {
+        margin-left: 1.5vw;
+        font-weight: bold;
+
+        &:hover {
+            color: $verde !important;
+            border-bottom: 1px solid white;
+        }
+    }
+}
+
+.navbar-desplegable {
+    background-color: $negro;
+    border: none;
+
+    @media (min-width:769px) {
+
+        margin-left: 1.5vw;
+        padding-right: 3vw;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            background-color: $negro;
+
+        }
+    }
+}
+
+
+/********************************************** LOGO **********************************************/
+
+
+.logo {
+    font-size: 3rem;
+    color: $verde !important;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+    margin-left: 2vw;
+
+    @media (max-width:768px) {
+        margin-left: 0;
+    }
+
+    @media (min-width:769px) {
+        margin-left: 2vw;
+    }
+}
+
+
+/**************************************** MENU HAMBURGUESA ****************************************/
+
+
+.boton-hamburguesa {
+
+    border-color: $verde !important;
+
+    &:focus {
+        box-shadow: none;
+        border-color: $verde;
+    }
+}
+
+.icono-hamburguesa {
+
+    background-image: url(../imagenes/iconos/drawer.svg) !important;
+}
+
+
+
+/********************************************* BANNER *********************************************/
+
+
+.banner img{
+    width: 100%;
+
+        @media (max-width:768px){
+            height: 100%;
+            
+        }
+
+        
+}
