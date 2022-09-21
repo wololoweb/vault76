@@ -1,0 +1,104 @@
+.grid-2{
+
+    display: grid;
+    grid-auto-rows: auto;
+
+    @media (max-width:768px){
+
+        grid-template-columns: 1fr;
+        margin: 0 5.5vw;
+
+        img {
+            width: 25.8vw;
+        }
+
+        p {
+            width: 25.8vw;
+        }
+
+        div {
+            img {
+                width: 100%;
+                margin: 5vw 0;
+                box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+            }
+
+            h2 {
+                font-weight: bold;
+                margin: 5vw 0;
+            }
+
+            h3 {
+                margin: 8vw 0 3vw 0;
+                font-size: .8rem;
+                font-weight: bold;
+
+                span {
+                    font-weight: normal;
+                    margin-left: .4vw;
+                }
+            }
+
+            p {
+                width: 100%;
+                margin-bottom: 5vw;
+            }
+
+        }
+
+    }
+
+    @media (min-width:769px){
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50vh 50vh;
+        padding: 0 5vw;
+        margin-top: 5vw;
+
+        div{
+            margin: 0 2vw 0 1.5vw;
+
+            img{
+                box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+                transition: all 1s;
+                width: 25.8vw;
+
+                &:hover{
+                    transform: scale(1.1, 1.1);
+                }
+            }
+
+            h2{
+                margin-top: 2vw;
+                font-size: 1.4rem;
+                font-weight: bold;
+                padding-right: 3.1vw;
+            }
+
+            h3 {
+                margin-top: 1vw;
+                font-size: .8rem;
+                font-weight: bold;
+
+                span {
+                    font-weight: normal;
+                    margin-left: .4vw;
+                }
+            }
+
+            p {
+                padding: 1vw 0;
+                width: 25.8vw;
+            }
+
+        }
+
+    }
+
+}
+
+.video-expansion{
+    padding-bottom: 3vw;
+
+   
+}

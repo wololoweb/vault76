@@ -327,6 +327,87 @@ header {
   }
 }
 
+.grid-2 {
+  display: grid;
+  grid-auto-rows: auto;
+}
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    margin: 0 5.5vw;
+  }
+  .grid-2 img {
+    width: 25.8vw;
+  }
+  .grid-2 p {
+    width: 25.8vw;
+  }
+  .grid-2 div img {
+    width: 100%;
+    margin: 5vw 0;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+  }
+  .grid-2 div h2 {
+    font-weight: bold;
+    margin: 5vw 0;
+  }
+  .grid-2 div h3 {
+    margin: 8vw 0 3vw 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .grid-2 div h3 span {
+    font-weight: normal;
+    margin-left: 0.4vw;
+  }
+  .grid-2 div p {
+    width: 100%;
+    margin-bottom: 5vw;
+  }
+}
+@media (min-width: 769px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh 50vh;
+    padding: 0 5vw;
+    margin-top: 5vw;
+  }
+  .grid-2 div {
+    margin: 0 2vw 0 1.5vw;
+  }
+  .grid-2 div img {
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+    transition: all 1s;
+    width: 25.8vw;
+  }
+  .grid-2 div img:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .grid-2 div h2 {
+    margin-top: 2vw;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-right: 3.1vw;
+  }
+  .grid-2 div h3 {
+    margin-top: 1vw;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .grid-2 div h3 span {
+    font-weight: normal;
+    margin-left: 0.4vw;
+  }
+  .grid-2 div p {
+    padding: 1vw 0;
+    width: 25.8vw;
+  }
+}
+
+.video-expansion {
+  padding-bottom: 3vw;
+}
+
 /**************************************** SECCION - EXPANSIONES ****************************************/
 .steel-reign-1, .steel-reign-2, .steel-reign-3,
 .steel-dawn-1, .steel-dawn-2, .steel-dawn-3,
