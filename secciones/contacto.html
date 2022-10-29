@@ -13,6 +13,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../js/storage.js"></script>
     <title>Contacto</title>
 </head>
 
@@ -88,17 +89,21 @@
 
                 <div>
                     <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="Ingrese aquí su apellido">
+                    <input  type="text" class="form-control" id="apellido" placeholder="Ingrese aquí su apellido">
                 </div>
 
                 <div>
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ej.: nombre@gmail.com">
+                    <input  type="email" class="form-control" id="email" placeholder="Ej.: nombre@gmail.com">
                 </div>
 
                 <div>
                     <label for="text-area" class="form-label">Deje aquí su mensaje</label>
-                    <textarea class="form-control" id="text-area" rows="10"></textarea>
+                    <textarea  class="form-control" id="text-area" rows="10"></textarea>
+                </div>
+                
+                <div>   
+                    <button class="button button-add button-outline" id="enviar">Enviar</button>
                 </div>
 
             </section>
