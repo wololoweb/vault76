@@ -1,9 +1,9 @@
 
 
-const inputNombre = document.querySelectorAll("#inputNombre") 
-const inputApellido = document.querySelectorAll("#inputApellido")
-const inputEmail = document.querySelectorAll("#inputEmail")
-const inputText = document.querySelectorAll("#inputText")
+const inputNombre = document.querySelector("#inputNombre") 
+const inputApellido = document.querySelector("#inputApellido")
+const inputEmail = document.querySelector("#inputEmail")
+const inputText = document.querySelector("#inputText")
 
 const btnEnviar = document.querySelector("button.button")
 
