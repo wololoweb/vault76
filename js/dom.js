@@ -9,10 +9,11 @@ const activarBotones = () => {
     const botonesAdd = document.querySelectorAll(".button.button-outline.button-add")
     botonesAdd.forEach((boton) => {        
         boton.addEventListener("click", (e) => { 
-            agregarAlCarrito(e)    
-            
+           agregarAlCarrito(e)    
+           
         })      
     })  
+    
 }
 
 const activarCarrito = () =>{
@@ -70,7 +71,8 @@ const mostrarCarrito = ()=> {
 //-------------------- AGREGO AL CARRITO --------------------//
 
 const agregarAlCarrito = (e)=> { 
-    let resultado = productos.find(prod => prod.nombre === e.target.id)
+    let resultado = productos.find(producto => producto.nombre === e.target.id)
+        
         if (resultado !== undefined) {
             carrito.push(resultado);  
             guardarCarritoStorage();
@@ -78,7 +80,7 @@ const agregarAlCarrito = (e)=> {
             contadorTitulos += 1
             console.clear()
             console.table(carrito)
-              
+            alertOK(e) 
         }
 
         precioTotalIva = precioTotal * IVA;
@@ -110,7 +112,7 @@ const recuperarCarrito = () => {
         })
         
         precioTotalIva = precioTotal * IVA;
-        
+
         console.table(carritoRecuperado)
 
     } else {
@@ -118,4 +120,14 @@ const recuperarCarrito = () => {
     }
 }
 document.addEventListener("DOMContentLoaded", recuperarCarrito)
+
+const alertOK = (e) => {
+    productos.find(producto => producto.nombre === e.target.id)
+    Swal.fire({
+        icon: 'success',
+        title: `${e.target.id}`,
+        text: 'Fue añadido a tu carrito',
+        /* footer: '<a href="">Why do I have this issue?</a>' */
+      })
+}
 
