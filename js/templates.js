@@ -34,3 +34,16 @@ const mostrar = (producto) => {
 
 }
 
+const sinProductos = () => {
+    return `<div class="resultadoCarrito">
+    <div>
+        <h1>No has ingresado ningún producto al carrito.</h1>
+            <div class="card-button">
+                <button class="button button-outline button-add button-volver"><a href="tienda.html">VOLVER</a></button>
+            </div>
+    </div>
+    </div>
+    
+</div>`
+}
+

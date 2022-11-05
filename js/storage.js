@@ -28,3 +28,5 @@ const recuperarDatos = () => {
 document.addEventListener("DOMContentLoaded", recuperarDatos)
 
 btnEnviar.addEventListener("click", almacenarDatos)
+
+

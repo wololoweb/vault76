@@ -564,16 +564,18 @@ span {
   color: white;
 }
 
-.button:hover:after a {
+.resultadoCarrito .button a:hover {
   color: white;
 }
 
-/* .resultadoCarrito .button a:hover{
-    color: white;
-} */
 .resultadoCarrito a {
   text-decoration: none;
   color: rgb(26, 25, 25);
+  display: block;
+}
+
+.resultadoCarrito .button:hover a {
+  color: white;
 }
 
 /**************************************** SECCION - EXPANSIONES ****************************************/
