@@ -71,7 +71,7 @@ const mostrarCarrito = ()=> {
 //-------------------- AGREGO AL CARRITO --------------------//
 
 const agregarAlCarrito = (e)=> { 
-    let resultado = productos.find(producto => producto.nombre === e.target.id)
+    let resultado = productos.find(producto => producto.nombre === e.target.id) // cuando hago target a este evento capturo su id (tag)
         
         if (resultado !== undefined) {
             carrito.push(resultado);  
@@ -126,7 +126,9 @@ const alertOK = (e) => {
     Swal.fire({
         icon: 'success',
         title: `${e.target.id}`,
-        text: 'Fue añadido a tu carrito',
+        text: 'Fue añadido a tu carrito.',
+        showConfirmButton: false,
+        timer: 1500
         /* footer: '<a href="">Why do I have this issue?</a>' */
       })
 }
