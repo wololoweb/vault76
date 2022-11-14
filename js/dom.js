@@ -1,3 +1,4 @@
+let productos = []
 
 //---------------- ADDEVENLISTENER  ----------------//
 
@@ -15,6 +16,8 @@ const activarBotones = () => {
     })  
     
 }
+
+
 
 const activarCarrito = () =>{
     const botonCarrito = document.querySelectorAll(".logo-carrito")
@@ -34,7 +37,32 @@ const activarCarrito = () =>{
 
 //---------------- CARGO PRODUCTOS EN HTML ----------------//
 
-const cargarProductos = ()=> { 
+
+
+
+const cargarProductos = async () => {
+    
+    let grillaProductos = ""
+    activoBotones = true
+    activoCarrito = true
+
+    try {
+        const response = await fetch("https://637114090399d1995d8aba51.mockapi.io/vault76")
+        productos = await response.json()
+        productos.forEach((producto) => {
+            grillaProductos += crearCard(producto)
+        })
+    } catch (error) {
+        
+    } finally {
+        grilla.innerHTML = grillaProductos
+        activarBotones()  
+        activarCarrito()
+    }
+    
+}
+
+/* const cargarProductos = ()=> { 
 
     grilla.innerHTML = ""
     
@@ -46,21 +74,22 @@ const cargarProductos = ()=> {
     activarBotones()  
     activarCarrito()
 }
-cargarProductos()
+cargarProductos() */
 
 //---------------- MOSTRAR CARRITO EN HTML ----------------//
 
 const mostrarCarrito = ()=> { 
       
+    if (carrito.length==0){
+        grilla.innerHTML = sinProductos()
+    } else {grilla.innerHTML = ""}
     
-    grilla.innerHTML = ""
     
     carrito.forEach((producto) => {
 
         containerCarrito.innerHTML = mostrar(producto) 
         
     })
-
     
     
 }
@@ -115,11 +144,16 @@ const recuperarCarrito = () => {
 
         console.table(carritoRecuperado)
 
-    } else {
+    } /* else {
         containerCarrito.innerHTML = sinProductos()
-    }
+    } */
 }
+
+document.addEventListener("DOMContentLoaded", cargarProductos)
+
 document.addEventListener("DOMContentLoaded", recuperarCarrito)
+
+
 
 const alertOK = (e) => {
     productos.find(producto => producto.nombre === e.target.id)

@@ -5,7 +5,7 @@ const crearCard = (producto) => {
 
     return `<div class="card-general">
                 
-                <div class="card-imagen">${producto.imagen}</div>
+                <div class="card-imagen"><img src="${producto.imagen}" alt="Imagen de Portada"></div>
                 <div class="card-nombre"><h2>${producto.nombre}</h2></div>
                 <div class="card-importe"><h3>$ ${producto.importe}</h3></div>
                 
