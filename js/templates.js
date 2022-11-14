@@ -10,7 +10,7 @@ const crearCard = (producto) => {
                 <div class="card-importe"><h3>$ ${producto.importe}</h3></div>
                 
                 <div class="card-button">
-                    <button class="button button-outline button-add" id="${producto.nombre}" title="Clic para agregar el '${producto.nombre}' al carrito">COMPRAR</button>
+                    <button class="button button-outline button-add" id="${producto.nombre}" title="Clic para agregar el '${producto.nombre}' al carrito">AÑADIR</button>
                 </div>
             </div>`
 
@@ -18,20 +18,25 @@ const crearCard = (producto) => {
 
 
 const mostrar = (producto) => {
-
-    return `<div class="resultadoCarrito">
-                <div>
-                <h1>Cantidad de títulos: ${contadorTitulos}</h1>
-                <h1>Importe: $ ${precioTotal}</h1>
-                <h1>Importe + IVA: $ ${precioTotalIva}</h1>
+    
+    return `<div class="containerCarrito">
                 
-                <div class="card-button">
-                <button class="button button-outline button-add button-volver"><a href="tienda.html">VOLVER</a></button>
+                <div>
+                    <img src="${producto.imagen}" alt="Imagen de Portada">
                 </div>
+                <div>
+                    <h1><strong>${producto.nombre}</strong></h1>
+                    <h2>Importe total: $ ${producto.importe}</h2>
+                    <h2>Importe total + IVA: $ ${producto.importe * IVA}</h2>
+                    
+                        <div class="card-button">
+                            <button class="button button-outline button-add button-eliminar">ELIMINAR</button>
+                            <button class="button button-outline button-add button-comprar">COMPRAR</button>
+                        </div>
                 </div>
                 
             </div>`
-
+            
 }
 
 const sinProductos = () => {
@@ -39,7 +44,7 @@ const sinProductos = () => {
     <div>
         <h1>No has ingresado ningún producto al carrito.</h1>
             <div class="card-button">
-                <button class="button button-outline button-add button-volver"><a href="tienda.html">VOLVER</a></button>
+                <button class="button button-outline button-add button-comprar"><a href="tienda.html">VOLVER</a></button>
             </div>
     </div>
     </div>

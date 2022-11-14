@@ -26,6 +26,7 @@ const activarCarrito = () =>{
             /* console.table(carrito) */  
            mostrarCarrito()
            
+           
                    
         }) 
              
@@ -79,18 +80,19 @@ cargarProductos() */
 //---------------- MOSTRAR CARRITO EN HTML ----------------//
 
 const mostrarCarrito = ()=> { 
-      
+    
     if (carrito.length==0){
         grilla.innerHTML = sinProductos()
     } else {grilla.innerHTML = ""}
     
     
+
     carrito.forEach((producto) => {
 
-        containerCarrito.innerHTML = mostrar(producto) 
-        
+        containerCarrito.innerHTML += mostrar(producto) 
+        botonComprar()
     })
-    
+   
     
 }
 
@@ -149,6 +151,23 @@ const recuperarCarrito = () => {
     } */
 }
 
+
+const botonComprar = () => {     
+    const botonBuy = document.querySelectorAll(".button-comprar")
+    botonBuy.forEach((boton) => {        
+        boton.addEventListener("click", (e) => { 
+            eliminarDelCarrito(e)          
+        })      
+    })    
+}
+
+const eliminarDelCarrito = (e) =>{
+    
+   
+    
+
+}
+
 document.addEventListener("DOMContentLoaded", cargarProductos)
 
 document.addEventListener("DOMContentLoaded", recuperarCarrito)
@@ -166,4 +185,3 @@ const alertOK = (e) => {
         /* footer: '<a href="">Why do I have this issue?</a>' */
       })
 }
-

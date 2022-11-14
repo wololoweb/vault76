@@ -14,6 +14,7 @@ span{
 }
 
 
+
 .card-general {
     background-color: rgb(26, 25, 25);
     box-shadow: 5px 20px 20px rgba(211, 211, 211, 0.3);
@@ -21,6 +22,7 @@ span{
     height: 570px;
     width: 250px;
     color: white;
+    border-radius: 15px;
 }
 
 .card-general h2{
@@ -152,6 +154,7 @@ span{
     background-color: rgb(26, 25, 25);
     color: white;
     
+    
 }
 
 .resultadoCarrito h1{
@@ -185,6 +188,82 @@ span{
 .resultadoCarrito .button:hover a{
     color: white
 }
+
+.containerCarrito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5vh 5.7vw 0 5.7vw;
+    padding: 0 3vw 3vw 2vw;
+    color: white;
+
+    
+    a{
+        color: rgb(26, 25, 25) ;
+        text-decoration: none;
+        width: 50px;
+    }
+
+    div{
+        background-color: rgb(26, 25, 25);
+        padding: 1vw 2vw 1vw 2vw;
+        border-radius: 15px;
+    }
+    img{
+        padding-top: 2vw;
+        width: 130px;
+        height: 180px;
+        
+    }
+    h1{
+        font-size: 1.2rem;
+        padding-bottom: 2vw;
+        padding-top: 3vw;
+        color: $verde;
+        margin-left: 21px;
+    }
+    h2{
+        font-size: 1rem;
+        margin-left: 21px;
+    }
+    .button{
+        margin-top: 20px;
+        font-size: 20px !important;
+        border: 0;
+        
+    }
+    .button-eliminar{
+        margin-right: 1vw;
+    }
+    .button-eliminar:hover{
+        background-color: #d34724;
+        color: white;
+        
+            
+            a{
+                color: white;
+            }
+    }
+    .button-comprar{
+        margin-left: 1vw;
+    }
+    .button-comprar:hover{
+        background-color:#27c116;
+        color: white;
+        
+            
+            a{
+                color: white;
+            }
+    }
+}    
+
+.card-button{
+    text-align: center;
+}
+
 
 
 
