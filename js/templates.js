@@ -30,8 +30,8 @@ const mostrar = (producto) => {
                     <h2>Importe total + IVA: $ ${producto.importe * IVA}</h2>
                     
                         <div class="card-button">
-                            <button class="button button-outline button-add button-eliminar">ELIMINAR</button>
-                            <button class="button button-outline button-add button-comprar">COMPRAR</button>
+                            <button class="button button-outline button-add button-eliminar" id="${producto.nombre}">ELIMINAR</button>
+                            <button class="button button-outline button-add button-comprar" id="${producto.nombre}">COMPRAR</button>
                         </div>
                 </div>
                 
@@ -42,7 +42,7 @@ const mostrar = (producto) => {
 const sinProductos = () => {
     return `<div class="resultadoCarrito">
     <div>
-        <h1>No has ingresado ningún producto al carrito.</h1>
+        <h1>No tienes ningún producto en el carrito.</h1>
             <div class="card-button">
                 <button class="button button-outline button-add button-comprar"><a href="tienda.html">VOLVER</a></button>
             </div>
