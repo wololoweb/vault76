@@ -168,6 +168,7 @@ const comprarDelCarrito = (e) => {
             
             containerCarrito.innerHTML += mostrar(producto) 
             botonComprar()
+            botonEliminar()
         })
         
        if (carrito.length==0) {
@@ -196,6 +197,7 @@ const eliminarDelCarrito = (e) => {
         carrito.forEach((producto) => {
             
             containerCarrito.innerHTML += mostrar(producto) 
+            botonComprar()
             botonEliminar()
         })
         
